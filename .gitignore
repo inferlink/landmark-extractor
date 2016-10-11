@@ -90,3 +90,8 @@ ENV/
 
 # OSX
 .DS_Store
+
+# PyDev Eclipse
+.project
+.pydevproject
+
