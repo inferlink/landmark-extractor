@@ -4,8 +4,7 @@ import re, json
 import abc
 import codecs
 import cgi
-from ..postprocessing.PostProcessor import RemoveExtraSpaces
-from ..postprocessing.PostProcessor import RemoveHtml
+from landmark_extractor.postprocessing.PostProcessor import RemoveExtraSpaces, RemoveHtml
 
 MAX_EXTRACT_LENGTH=100000
 ITEM_RULE = 'ItemRule'
