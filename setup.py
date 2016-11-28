@@ -7,7 +7,7 @@ config = {
     'url': 'https://github.com/inferlink/landmark-extractor',
     'download_url': 'https://github.com/inferlink/landmark-extractor',
     'author_email': 'developers@inferlink.com ',
-    'version': '0.1',
+    'version': '0.1.1',
     'license': 'GNU AGPL',
     'packages': find_packages(),
     'classifiers': []
