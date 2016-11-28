@@ -13,6 +13,11 @@ ITERATION_RULE = 'IterationRule'
 _specialcharacters = frozenset(
     '\^${}[]().*+?|<>-&')
 
+STATUS_INVALID = 'INVALID'
+STATUS_VALID = 'VALID'
+DIGIT_VALIDATION_REGEX = '^\\d+$'
+NOT_NULL_VALIDATION_REGEX = '^.*?$'
+
 def escape_regex_string(input_string):
     s = list(input_string)
     specialcharacters = _specialcharacters
@@ -48,7 +53,8 @@ def loadRule(rule_json_object):
     """ Method to load the rules - when adding a new rule it must be added to the if statement within this method. """
     name = rule_json_object['name']
     rule_type = rule_json_object['rule_type']
-    validation = None
+    validation_regex = None
+    required = False
     removehtml = False
     include_end_regex = False #Default to false for bakward compatibility
     strip_end_regex = None
@@ -56,8 +62,11 @@ def loadRule(rule_json_object):
     if 'sub_rules' in rule_json_object:
         sub_rules = rule_json_object['sub_rules']
     
-    if 'validation' in rule_json_object:
-        validation = rule_json_object['validation']
+    if 'validation_regex' in rule_json_object:
+        validation_regex = rule_json_object['validation_regex']
+    
+    if 'required' in rule_json_object:
+        required = rule_json_object['required']
     
     if 'removehtml' in rule_json_object:
         removehtml = rule_json_object['removehtml']
@@ -72,7 +81,7 @@ def loadRule(rule_json_object):
     if rule_type == ITEM_RULE or rule_type == 'RegexRule':
         begin_regex = rule_json_object['begin_regex']
         end_regex = rule_json_object['end_regex']
-        rule = ItemRule(name, begin_regex, end_regex, include_end_regex, strip_end_regex, validation, removehtml, sub_rules)
+        rule = ItemRule(name, begin_regex, end_regex, include_end_regex, strip_end_regex, validation_regex, required, removehtml, sub_rules)
     if rule_type == ITERATION_RULE or rule_type == 'RegexIterationRule':
         begin_regex = rule_json_object['begin_regex']
         end_regex = rule_json_object['end_regex']
@@ -87,7 +96,7 @@ def loadRule(rule_json_object):
         
         rule = IterationRule(name, begin_regex, end_regex, iter_begin_regex, iter_end_regex,
                                   include_end_regex, strip_end_regex, no_first_begin_iter_rule,
-                                  no_last_end_iter_rule, validation, removehtml,
+                                  no_last_end_iter_rule, validation_regex, required, removehtml,
                                   sub_rules)
     return rule
     
@@ -132,11 +141,12 @@ class Rule:
     def set_visible_chunk_after(self, visible_chunk_after):
         self.visible_chunk_after = visible_chunk_after
     
-    def __init__(self, name, validation = None, removehtml = False, sub_rules = None):
+    def __init__(self, name, validation_regex = None, required = False, removehtml = False, sub_rules = None):
         self.name = name
         self.validation_regex = None
-        if validation:
-            self.validation_regex = re.compile(validation, re.S)
+        if validation_regex:
+            self.validation_regex = re.compile(validation_regex, re.S)
+        self.required = required
         self.removehtml = removehtml 
         self.sub_rules = []
         if sub_rules:
@@ -199,6 +209,10 @@ class ItemRule(Rule):
         json_dict['end_regex'] = self.end_regex
         json_dict['strip_end_regex'] = self.strip_end_regex
         json_dict['removehtml'] = self.removehtml
+        if self.required:
+            json_dict['required'] = self.required
+        if self.validation_regex:
+            json_dict['validation_regex'] = self.validation_regex.pattern
         if self.visible_chunk_before:
             json_dict['visible_chunk_before'] = self.visible_chunk_before
         if self.visible_chunk_after:
@@ -208,24 +222,26 @@ class ItemRule(Rule):
         return json.dumps(json_dict)
     
     def validate(self, value):
-        valid = True
-        
         if self.validation_regex:
             valid = self.validation_regex.match(value['extract'])
-        if not valid:
-            print 'Validation Failed for ['+self.name+']: ' + value['extract']
-            return valid
+            if not valid:
+                value['status'] = STATUS_INVALID
+            else:
+                value['status'] = STATUS_VALID
+        if self.required:
+            if value['status'] == STATUS_INVALID or not value['extract']:
+                return False
         
-        #TODO: Check the sub rules validation
         if self.sub_rules:
             valid = self.sub_rules.validate(value['sub_rules'])
-        
-        return valid
+            if not valid:
+                return False
+        return True
     
     def __init__(self, name, begin_regex, end_regex, include_end_regex = False,
-                 strip_end_regex = None, validation = None, removehtml = False,
+                 strip_end_regex = None, validation_regex = None, required = False, removehtml = False,
                  sub_rules = None):
-        Rule.__init__(self, name, validation, removehtml, sub_rules)
+        Rule.__init__(self, name, validation_regex, required, removehtml, sub_rules)
         self.begin_rule = re.compile(begin_regex, re.S)
         self.end_rule = re.compile(end_regex, re.S)
         
@@ -299,25 +315,19 @@ class IterationRule(ItemRule):
         return json.dumps(json_dict)
     
     def validate(self, value):
-        valid = True
         for single_value in value['sequence']:
-            if not ItemRule.validate(self, single_value):
-                valid = False
-                break
-            
-            #TODO: Check the sub rules validation
-            if self.sub_rules:
-                valid = self.sub_rules.validate(single_value['sub_rules'])
-        
-        return valid
+            valid = ItemRule.validate(self, single_value)
+            if not valid:
+                return False
+        return True
     
     def __init__(self, name, begin_regex, end_regex, iter_begin_regex,
                  iter_end_regex, include_end_regex = False, backwards_end_regex = None, 
                  no_first_begin_iter_rule = False, no_last_end_iter_rule = False,
-                 validation = None, removehtml = False, sub_rules = None):
+                 validation_regex = None, required = False, removehtml = False, sub_rules = None):
         
         ItemRule.__init__(self, name, begin_regex, end_regex, include_end_regex,
-                          backwards_end_regex, validation, removehtml, sub_rules)
+                          backwards_end_regex, validation_regex, required, removehtml, sub_rules)
         
         self.iter_begin_regex = iter_begin_regex
         self.iter_end_regex = iter_end_regex
@@ -337,9 +347,10 @@ class RuleSet:
     
     def validate(self, extraction):
         for rule in self.rules:
-            if not rule.validate(extraction[rule.name]):
-                return False
-        return True
+            valid = rule.validate(extraction[rule.name])
+            if not valid:
+                return {}
+        return extraction
     
     def names(self):
         names = []
@@ -458,14 +469,13 @@ def main(argv=None):
         rules = RuleSet(json_object)
         
         extraction_list = rules.extract(page_str)
+        extraction_list = rules.validate(extraction_list)
         
-        if rules.validate(extraction_list):
-            if flatten:
-                print json.dumps(flattenResult(extraction_list), sort_keys=True, indent=2, separators=(',', ': '))
-            else:
-                print json.dumps(extraction_list, sort_keys=True, indent=2, separators=(',', ': '))
+        if flatten:
+            print json.dumps(flattenResult(extraction_list), sort_keys=True, indent=2, separators=(',', ': '))
         else:
-            extraction_list = None
+            print json.dumps(extraction_list, sort_keys=True, indent=2, separators=(',', ': '))
+        
     except Usage, err:
         print >>sys.stderr, err.msg
         print >>sys.stderr, "for help use --help"
