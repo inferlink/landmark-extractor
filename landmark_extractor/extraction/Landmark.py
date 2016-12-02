@@ -5,6 +5,7 @@ import abc
 import codecs
 import cgi
 from landmark_extractor.postprocessing.PostProcessor import RemoveExtraSpaces, RemoveHtml
+from collections import OrderedDict
 
 MAX_EXTRACT_LENGTH=100000
 ITEM_RULE = 'ItemRule'
@@ -339,7 +340,7 @@ class IterationRule(ItemRule):
 class RuleSet:
     """A set of rules that is built from a JSON Object or JSON Array"""
     def extract(self, page_str):
-        extraction_object = {}
+        extraction_object = OrderedDict()
         for rule in self.rules:
             extraction_object[rule.name] = rule.apply(page_str);
         
