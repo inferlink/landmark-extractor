@@ -1,0 +1,65 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>P.  Dai, Mausam  , D.  S. Weld and J.  Goldsmith (2011) Topological Value Iteration Algorithms</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css" />
+<link rel='stylesheet' type='text/css' href='/no_sidebar.css' />
+  <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</head>
+<body>
+  <div id="header">
+    <img src="/images/header.jpg" alt="Journal of Artificial Intelligence Research" />
+    <ul id="nav">
+      <li id="spacer"></li>
+      <li id="navhome"><a href="/">Home</a></li>
+      <li id="navcontents"><a href="/contents.html">Contents</a></li>
+      <li id="navawards"><a href="/awardedpapers.html">Award Track</a></li>
+      <li id="navsurveys"><a href="/surveypapers.html">Surveys</a></li>
+      <li id="navsearch"><a href="/search.html">Search</a></li>
+      <li id="navmasthead"><a href="/vol/mast52.html">Masthead</a></li>
+      <li id="navsubmission"><a href="/submission_info.html">Submission Info</a></li>
+    </ul>
+  </div>
+  <div id="jair">
+    <div id="content">
+<!-- :::: end header :::: -->
+
+
+<div class="abstract">
+<cite>P.  Dai, Mausam  , D.  S. Weld and J.  Goldsmith (2011) "Topological Value Iteration Algorithms", Volume 42, pages 181-209</cite>
+<p class="media"><a href="/media/3390/live-3390-5896-jair.pdf">PDF</a>&nbsp;|&nbsp;<a href="/media/3390/live-3390-5897-jair.ps">PostScript</a>&nbsp;|&nbsp;<a href='http://dx.doi.org/10.1613/jair.3390'>doi:10.1613/jair.3390</a></p>
+<p>Value iteration is a powerful yet inefficient algorithm for Markov decision processes (MDPs) because it puts the majority of its effort into backing up the entire state space, which turns out to be unnecessary in many cases. In order to overcome this problem, many approaches have been proposed. Among them, ILAO* and variants of RTDP are state-of-the-art ones. These methods use reachability analysis and heuristic search to avoid some unnecessary backups. However, none of these approaches build the graphical structure of the state transitions in a pre-processing step or use the structural information to systematically decompose a problem, whereby generating an intelligent backup sequence of the state space. In this paper, we present two optimal MDP algorithms. The first algorithm,  topological value iteration (TVI), detects the structure of MDPs and backs up states based on topological sequences. It (1) divides an MDP into strongly-connected components (SCCs), and (2) solves these components sequentially. TVI outperforms VI and other state-of-the-art algorithms vastly when an MDP has multiple, close-to-equal-sized SCCs. The second algorithm,  focused  topological value iteration (FTVI), is an extension of TVI. FTVI restricts its attention to connected components that are relevant for solving the MDP. Specifically, it uses a small amount of heuristic search to eliminate provably sub-optimal actions; this pruning allows FTVI to find smaller connected components, thus running faster.  We demonstrate that FTVI outperforms TVI by an order of magnitude, averaged across several domains. Surprisingly, FTVI also significantly outperforms popular `heuristically-informed' MDP algorithms such as ILAO*, LRTDP, BRTDP and Bayesian-RTDP in many domains, sometimes by as much as two orders of magnitude. Finally, we characterize the type of domains where FTVI excels --- suggesting a way to an informed choice of solver.</p>
+<a href="/vol/vol42.html">Click here to return to Volume 42 contents list</a>
+<meta name="citation_title" content="Topological Value Iteration Algorithms">
+<meta name="citation_author" content="Dai, P.">
+<meta name="citation_author" content=", Mausam">
+<meta name="citation_author" content="Weld, D. S.">
+<meta name="citation_author" content="Goldsmith, J.">
+<meta name="citation_publication_date" content="2011">
+<meta name="citation_journal_title" content="Journal of Artificial Intelligence Research">
+<meta name="citation_firstpage" content="181">
+<meta name="citation_lastpage" content="209">
+<meta name="citation_pdf_url" content="http://www.jair.org/media/3390/live-3390-5896-jair.pdf">
+</div>
+</div>
+<!-- :::: begin footer :::: -->
+<div class="doorstop"><!-- this is only here to keep the door from closing on floated content --></div>
+  </div>
+  <div id="footer">
+    <p class="links"><a href="/faqs.html">FAQ</a> 
+| <a href="/bestpaper.html">Best Papers</a> 
+| <a href="/resources.html">WWW AI Resources</a> 
+<!-- | <a href="/comments.html">Comments</a --> 
+<!-- | <a href="http://mailman.isi.edu/mailman/listinfo/jairsubscribers">Notify Me of New Articles</a> -->
+| <a href="http://mailman.isi.edu/mailman/listinfo/jairsubscribers">Mailing List</a> 
+| <a href="/articles.rss">RSS</a> 
+| <img src="/images/Twitter_logo_white.png" alt="" height="10">
+  <a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fwww.jair.org%2Findex.html&screen_name=JAIR_Editor&tw_p=followbutton">Follow us on Twitter</a>
+<!--  <a href="https://twitter.com/intent/user?screen_name=JAIR_Editor" rel="nofollow">Follow us on Twitter</a> -->
+| <a href="/support_JAIR.html">Supporting JAIR</a>
+</p>
+    <p class="copyright">&copy; Copyright 1993-2009 AI Access Foundation, Inc.</p>
+  </div>
+</body>
+</html>
