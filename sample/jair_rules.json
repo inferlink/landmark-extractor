@@ -1,0 +1,36 @@
+[
+    {
+        "name": "title",
+        "rule_type": "RegexRule",
+        "begin_regex": "\\<meta name=\"citation_title\" content=\"",
+        "end_regex": "\"\\>"
+    },
+    {
+	    "begin_regex": "\\</a\\>\\</p\\>\n\\<p\\>",
+	    "end_regex": "\\</p\\>\n\\<a href=\"/vol/",
+	    "name": "abstract",
+	    "rule_type": "RegexRule"
+    },
+	{
+        "name": "authors",
+        "rule_type": "RegexIterationRule",
+        "begin_regex": "\\<meta",
+        "end_regex": "\\</div\\>",
+        "iter_begin_regex": "citation_author\" content=\"",
+        "iter_end_regex": "\"\\>",
+        "removehtml": true
+    },
+    {
+        "name": "volume",
+        "rule_type": "RegexRule",
+        "begin_regex": "\\<meta name=\"citation_publication_date\" content=\"",
+        "end_regex": "\"\\>",
+        "validation": "\\d+"
+    },
+	{
+        "name": "pages",
+        "rule_type": "RegexRule",
+        "begin_regex": ", pages ",
+        "end_regex": "\\</cite\\>"
+    }
+]
