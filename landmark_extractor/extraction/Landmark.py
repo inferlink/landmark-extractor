@@ -372,7 +372,7 @@ class RuleSet:
         json_list = []
         for rule in self.rules:
             json_list.append(json.loads(rule.toJson()))
-        return json.dumps(json_list, sort_keys=True, indent=2, separators=(',', ': '))
+        return json.dumps(json_list, indent=2, separators=(',', ': '))
     
     #Must have over 50 chars and more than 50% html and on 50% of the pages through this one out
     def removeBadRules(self, pages):
@@ -473,9 +473,9 @@ def main(argv=None):
         extraction_list = rules.validate(extraction_list)
         
         if flatten:
-            print json.dumps(flattenResult(extraction_list), sort_keys=True, indent=2, separators=(',', ': '))
+            print json.dumps(flattenResult(extraction_list), indent=2, separators=(',', ': '))
         else:
-            print json.dumps(extraction_list, sort_keys=True, indent=2, separators=(',', ': '))
+            print json.dumps(extraction_list, indent=2, separators=(',', ': '))
         
     except Usage, err:
         print >>sys.stderr, err.msg
