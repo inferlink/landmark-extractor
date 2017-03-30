@@ -78,7 +78,7 @@ def loadRule(rule_json_object):
     
     if 'strip_end_regex' in rule_json_object:
         strip_end_regex = rule_json_object['strip_end_regex']
-            
+    
     """ This is where we add our new type """
     if rule_type == ITEM_RULE or rule_type == 'RegexRule':
         begin_regex = rule_json_object['begin_regex']
@@ -100,6 +100,10 @@ def loadRule(rule_json_object):
                                   include_end_regex, strip_end_regex, no_first_begin_iter_rule,
                                   no_last_end_iter_rule, validation_regex, required, removehtml,
                                   sub_rules)
+    
+    if 'id' in rule_json_object:
+        rule.id = rule_json_object['id']
+    
     return rule
     
 class Rule:
