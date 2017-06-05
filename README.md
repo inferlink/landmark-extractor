@@ -132,3 +132,34 @@ There are two types of rules currently that can be used to extract information f
 * iter_end_regex: The quote escaped regular expression for the end EACH item to be repeated (starting from the end of each iter_begin_regex).
 * no_first_begin_iter_rule [Optional]: Boolean which defines if the iter_begin_regex should be used for the FIRST element of the list
 * no_last_end_iter_rule [Optional]: Boolean which defines if the iter_end_regex should be used for the LAST element of the list
+
+# Landmark Validation
+
+## Running
+No third party libraries are necessary. Run the following from the command line
+``` bash
+python -m landmark_extractor.validation.Validation <OPTIONAL_PARAMS> <VALIDATION_RULES_FILE> <EXTRACTIONS>
+```
+
+`<OPTIONAL_PARAMS>`
+
+`-s`: Simplify results
+
+### Examples
+```bash
+python -m landmark_extractor.validation.Validation -s sample/validation_rules_sample_valid.json sample/sample_extrations.json
+```
+```json
+{
+  "valid": true
+}
+```
+
+```bash
+python -m landmark_extractor.validation.Validation -s sample/validation_rules_sample_invalid.json sample/sample_extrations.json
+```
+```json
+{
+  "valid": false
+}
+```

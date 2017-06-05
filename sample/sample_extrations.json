@@ -1,0 +1,796 @@
+{
+  "JAIR119": {
+    "end_index": 1883,
+    "extract": "Survey Papers Track",
+    "rule_id": "91241921-f0f3-462e-ab44-564191d943d5",
+    "begin_index": 1863
+  },
+  "120": {
+    "end_index": 1944,
+    "extract": "This page includes survey papers published in JAIR.<",
+    "rule_id": "82340bb1-377d-46af-ae83-a78fa30f3a54",
+    "begin_index": 1892
+  },
+  "_div_list0001": {
+    "end_index": 1883,
+    "extract": "JAIR Survey Papers Track",
+    "rule_id": "0ce26383-efed-42d1-92a1-85cfe42c492a",
+    "sequence": [
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 1883,
+            "extract": "JAIR Survey Papers Track",
+            "rule_id": "5b0c9ad7-17cc-446a-815e-999d25cbde22",
+            "begin_index": 1859
+          }
+        },
+        "extract": "JAIR Survey Papers Track",
+        "begin_index": 1859,
+        "sequence_number": 1,
+        "end_index": 1883
+      }
+    ],
+    "begin_index": 1859
+  },
+  "_div_list0002": {
+    "end_index": 19813,
+    "extract": "Amarda  Shehu and Erion  Plaku (2016) \"A Survey of Computational Treatments of Biomolecules by   Robotics-Inspired Methods Modeling Equilibrium Structure and   Dynamic\", Volume 57, pages 509-572</cite>\n<p class=\"media\"><a href=\"/papers/paper5040.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/5040/live-5040-9643-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.5040\">doi:10.1613/jair.5040</a></p>\n<meta name=\"citation_title\" content=\"A Survey of Computational Treatments of Biomolecules by   Robotics-Inspired Methods Modeling Equilibrium Structure and   Dynamic\">\n<meta name=\"citation_author\" content=\"Shehu, Amarda\">\n<meta name=\"citation_author\" content=\"Plaku, Erion\">\n<meta name=\"citation_publication_date\" content=\"2016\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"509\">\n<meta name=\"citation_lastpage\" content=\"572\">\n<meta name=\"citation_volume\" content=\"57\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/5040/live-5040-9643-jair.pdf\">\n</div>\n<div>\n<cite>Yoav  Goldberg (2016) \"A Primer on Neural Network Models for Natural Language Processing\", Volume 57, pages 345-420</cite>\n<p class=\"media\"><a href=\"/papers/paper4992.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/4992/live-4992-9623-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.4992\">doi:10.1613/jair.4992</a></p>\n<meta name=\"citation_title\" content=\"A Primer on Neural Network Models for Natural Language Processing\">\n<meta name=\"citation_author\" content=\"Goldberg, Yoav\">\n<meta name=\"citation_publication_date\" content=\"2016\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"345\">\n<meta name=\"citation_lastpage\" content=\"420\">\n<meta name=\"citation_volume\" content=\"57\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/4992/live-4992-9623-jair.pdf\">\n</div>\n<div class=\"odd\">\n<cite>Raffaella  Bernardi, Ruket  Cakici, Desmond  Elliott, Aykut  Erdem, Erkut  Erdem, Nazli  Ikizler-Cinbis, Frank  Keller, Adrian  Muscat and Barbara  Plank (2016) \"Automatic Description Generation from Images: A Survey of Models, Datasets, and Evaluation Measures\", Volume 55, pages 409-442</cite>\n<p class=\"media\"><a href=\"/papers/paper4900.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/4900/live-4900-9139-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"/media/4900/live-4900-9140-jair.ps\">PostScript</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.4900\">doi:10.1613/jair.4900</a></p>\n<meta name=\"citation_title\" content=\"Automatic Description Generation from Images: A Survey of Models, Datasets, and Evaluation Measures\">\n<meta name=\"citation_author\" content=\"Bernardi, Raffaella\">\n<meta name=\"citation_author\" content=\"Cakici, Ruket\">\n<meta name=\"citation_author\" content=\"Elliott, Desmond\">\n<meta name=\"citation_author\" content=\"Erdem, Aykut\">\n<meta name=\"citation_author\" content=\"Erdem, Erkut\">\n<meta name=\"citation_author\" content=\"Ikizler-Cinbis, Nazli\">\n<meta name=\"citation_author\" content=\"Keller, Frank\">\n<meta name=\"citation_author\" content=\"Muscat, Adrian\">\n<meta name=\"citation_author\" content=\"Plank, Barbara\">\n<meta name=\"citation_publication_date\" content=\"2016\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"409\">\n<meta name=\"citation_lastpage\" content=\"442\">\n<meta name=\"citation_volume\" content=\"55\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/4900/live-4900-9139-jair.pdf\">\n</div>\n<div>\n<cite>Daan  Bloembergen, Karl  Tuyls, Daniel  Hennes and Michael  Kaisers (2015) \"Evolutionary Dynamics of Multi-Agent Learning: A Survey\", Volume 53, pages 659-697</cite>\n<p class=\"media\"><a href=\"/papers/paper4818.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/4818/live-4818-8818-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"/media/4818/live-4818-8819-jair.ps\">PostScript</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.4818\">doi:10.1613/jair.4818</a></p>\n<meta name=\"citation_title\" content=\"Evolutionary Dynamics of Multi-Agent Learning: A Survey\">\n<meta name=\"citation_author\" content=\"Bloembergen, Daan\">\n<meta name=\"citation_author\" content=\"Tuyls, Karl\">\n<meta name=\"citation_author\" content=\"Hennes, Daniel\">\n<meta name=\"citation_author\" content=\"Kaisers, Michael\">\n<meta name=\"citation_publication_date\" content=\"2015\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"659\">\n<meta name=\"citation_lastpage\" content=\"697\">\n<meta name=\"citation_volume\" content=\"53\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/4818/live-4818-8818-jair.pdf\">\n</div>\n<div class=\"odd\">\n<cite>C.  R. Shelton and G.  Ciardo (2014) \"Tutorial on Structured Continuous-Time Markov Processes\", Volume 51, pages 725-778</cite>\n<p class=\"media\"><a href=\"/papers/paper4415.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/4415/live-4415-8366-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.4415\">doi:10.1613/jair.4415</a></p>\n<meta name=\"citation_title\" content=\"Tutorial on Structured Continuous-Time Markov Processes\">\n<meta name=\"citation_author\" content=\"Shelton, C. R.\">\n<meta name=\"citation_author\" content=\"Ciardo, G.\">\n<meta name=\"citation_publication_date\" content=\"2014\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"725\">\n<meta name=\"citation_lastpage\" content=\"778\">\n<meta name=\"citation_volume\" content=\"51\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/4415/live-4415-8366-jair.pdf\">\n</div>\n<div>\n<cite>J.D.  Fernandez and F.  Vico (2013) \"AI Methods in Algorithmic Composition: A Comprehensive Survey\", Volume 48, pages 513-582</cite>\n<p class=\"media\"><a href=\"/papers/paper3908.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/3908/live-3908-7454-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"/media/3908/live-3908-7453-jair.ps\">PostScript</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.3908\">doi:10.1613/jair.3908</a></p>\n<meta name=\"citation_title\" content=\"AI Methods in Algorithmic Composition: A Comprehensive Survey\">\n<meta name=\"citation_author\" content=\"Fernandez, J.D.\">\n<meta name=\"citation_author\" content=\"Vico, F.\">\n<meta name=\"citation_publication_date\" content=\"2013\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"513\">\n<meta name=\"citation_lastpage\" content=\"582\">\n<meta name=\"citation_volume\" content=\"48\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/3908/live-3908-7454-jair.pdf\">\n</div>\n<div class=\"odd\">\n<cite>D.  M. Roijers, P.  Vamplew, S.  Whiteson and R.  Dazeley (2013) \"A Survey of Multi-Objective Sequential Decision-Making\", Volume 48, pages 67-113</cite>\n<p class=\"media\"><a href=\"/papers/paper3987.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/3987/live-3987-7363-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"/media/3987/live-3987-7364-jair.ps\">PostScript</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.3987\">doi:10.1613/jair.3987</a></p>\n<meta name=\"citation_title\" content=\"A Survey of Multi-Objective Sequential Decision-Making\">\n<meta name=\"citation_author\" content=\"Roijers, D. M.\">\n<meta name=\"citation_author\" content=\"Vamplew, P.\">\n<meta name=\"citation_author\" content=\"Whiteson, S.\">\n<meta name=\"citation_author\" content=\"Dazeley, R.\">\n<meta name=\"citation_publication_date\" content=\"2013\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"67\">\n<meta name=\"citation_lastpage\" content=\"113\">\n<meta name=\"citation_volume\" content=\"48\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/3987/live-3987-7363-jair.pdf\">\n</div>\n<div>\n<cite>R.  Mourad, C.  Sinoquet, N.  L. Zhang, T.  Liu and P.  Leray (2013) \"A Survey on Latent Tree Models and Applications\", Volume 47, pages 157-203</cite>\n<p class=\"media\"><a href=\"/papers/paper3879.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/3879/live-3879-7058-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"/media/3879/live-3879-7057-jair.ps\">PostScript</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.3879\">doi:10.1613/jair.3879</a></p>\n<meta name=\"citation_title\" content=\"A Survey on Latent Tree Models and Applications\">\n<meta name=\"citation_author\" content=\"Mourad, R.\">\n<meta name=\"citation_author\" content=\"Sinoquet, C.\">\n<meta name=\"citation_author\" content=\"Zhang, N. L.\">\n<meta name=\"citation_author\" content=\"Liu, T.\">\n<meta name=\"citation_author\" content=\"Leray, P.\">\n<meta name=\"citation_publication_date\" content=\"2013\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"157\">\n<meta name=\"citation_lastpage\" content=\"203\">\n<meta name=\"citation_volume\" content=\"47\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/3879/live-3879-7058-jair.pdf\">\n</div>\n<div class=\"odd\">\n<cite>R.  A. Rossi, L.  K. McDowell, D.  W. Aha and J.  Neville (2012) \"Transforming Graph Data for Statistical Relational Learning\", Volume 45, pages 363-441</cite>\n<p class=\"media\"><a href=\"/papers/paper3659.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/3659/live-3659-6589-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"/media/3659/live-3659-6588-jair.ps\">PostScript</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.3659\">doi:10.1613/jair.3659</a></p>\n<meta name=\"citation_title\" content=\"Transforming Graph Data for Statistical Relational Learning\">\n<meta name=\"citation_author\" content=\"Rossi, R. A.\">\n<meta name=\"citation_author\" content=\"McDowell, L. K.\">\n<meta name=\"citation_author\" content=\"Aha, D. W.\">\n<meta name=\"citation_author\" content=\"Neville, J.\">\n<meta name=\"citation_publication_date\" content=\"2012\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"363\">\n<meta name=\"citation_lastpage\" content=\"441\">\n<meta name=\"citation_volume\" content=\"45\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/3659/live-3659-6589-jair.pdf\">\n</div>\n<div>\n<cite>A.  M. Rush and M.  J.  Collins (2012) \"A Tutorial on Dual Decomposition and Lagrangian Relaxation for Inference in Natural Language Processing\", Volume 45, pages 305-362</cite>\n<p class=\"media\"><a href=\"/papers/paper3680.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/3680/live-3680-6584-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"/media/3680/live-3680-6585-jair.ps\">PostScript</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.3680\">doi:10.1613/jair.3680</a></p>\n<meta name=\"citation_title\" content=\"A Tutorial on Dual Decomposition and Lagrangian Relaxation for Inference in Natural Language Processing\">\n<meta name=\"citation_author\" content=\"Rush, A. M.\">\n<meta name=\"citation_author\" content=\"Collins, M. J. \">\n<meta name=\"citation_publication_date\" content=\"2012\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"305\">\n<meta name=\"citation_lastpage\" content=\"362\">\n<meta name=\"citation_volume\" content=\"45\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/3680/live-3680-6584-jair.pdf\">\n</div>\n<div class=\"odd\">\n<cite>I.  Androutsopoulos and P.  Malakasiotis (2010) \"A Survey of Paraphrasing and Textual Entailment Methods\", Volume 38, pages 135-187</cite>\n<p class=\"media\"><a href=\"/papers/paper2985.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/2985/live-2985-5001-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"/media/2985/live-2985-5000-jair.ps\">PostScript</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.2985\">doi:10.1613/jair.2985</a></p>\n<meta name=\"citation_title\" content=\"A Survey of Paraphrasing and Textual Entailment Methods\">\n<meta name=\"citation_author\" content=\"Androutsopoulos, I.\">\n<meta name=\"citation_author\" content=\"Malakasiotis, P.\">\n<meta name=\"citation_publication_date\" content=\"2010\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"135\">\n<meta name=\"citation_lastpage\" content=\"187\">\n<meta name=\"citation_volume\" content=\"38\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/2985/live-2985-5001-jair.pdf\">\n</div>\n<div>\n<cite>P.  D. Turney and P.  Pantel (2010) \"From Frequency to Meaning: Vector Space Models of Semantics\", Volume 37, pages 141-188</cite>\n<p class=\"media\"><a href=\"/papers/paper2934.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/2934/live-2934-4846-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"/media/2934/live-2934-4845-jair.ps\">PostScript</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.2934\">doi:10.1613/jair.2934</a></p>\n<meta name=\"citation_title\" content=\"From Frequency to Meaning: Vector Space Models of Semantics\">\n<meta name=\"citation_author\" content=\"Turney, P. D.\">\n<meta name=\"citation_author\" content=\"Pantel, P.\">\n<meta name=\"citation_publication_date\" content=\"2010\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"141\">\n<meta name=\"citation_lastpage\" content=\"188\">\n<meta name=\"citation_volume\" content=\"37\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/2934/live-2934-4846-jair.pdf\">\n</div>\n<div class=\"odd\">\n<cite>H.  E. Dixon,  M.  L. Ginsberg and  A.  J. Parkes (2004) \"Generalizing Boolean Satisfiability I: Background and Survey of Existing Work\", Volume 21, pages 193-243</cite>\n<p class=\"media\"><a href=\"/papers/paper1353.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/1353/live-1353-2285-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"/media/1353/live-1353-2284-jair.ps.Z\">PostScript</a>&nbsp;|&nbsp;<a href=\"http://www.cs.cmu.edu/afs/cs/project/jair/pub/volume21/dixon04a-html/zap1.html\" onclick=\"window.open(this.href);return false;\">HTML</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.1353\">doi:10.1613/jair.1353</a></p>\n<meta name=\"citation_title\" content=\"Generalizing Boolean Satisfiability I: Background and Survey of Existing Work\">\n<meta name=\"citation_author\" content=\"Dixon,  H. E.\">\n<meta name=\"citation_author\" content=\"Ginsberg,  M. L.\">\n<meta name=\"citation_author\" content=\"Parkes,  A. J.\">\n<meta name=\"citation_publication_date\" content=\"2004\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"193\">\n<meta name=\"citation_lastpage\" content=\"243\">\n<meta name=\"citation_volume\" content=\"21\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/1353/live-1353-2285-jair.pdf\">\n</div>\n<div>\n<cite>L.  P. Kaelbling,  M.  L. Littman and  A.  W. Moore (1996) \"Reinforcement Learning:  A Survey\", Volume 4, pages 237-285</cite>\n<p class=\"media\"><a href=\"/papers/paper301.html\">Abstract</a>&nbsp;|&nbsp;<a href=\"/media/301/live-301-1562-jair.pdf\">PDF</a>&nbsp;|&nbsp;<a href=\"/media/301/live-301-1561-jair.ps\">PostScript</a>&nbsp;|&nbsp;<a href=\"http://www.cs.cmu.edu/afs/cs/project/jair/pub/volume4/kaelbling96a-html/rl-survey.html\" onclick=\"window.open(this.href);return false;\">HTML</a>&nbsp;|&nbsp;<a href=\"http://dx.doi.org/10.1613/jair.301\">doi:10.1613/jair.301</a></p>\n<meta name=\"citation_title\" content=\"Reinforcement Learning:  A Survey\">\n<meta name=\"citation_author\" content=\"Kaelbling,  L. P.\">\n<meta name=\"citation_author\" content=\"Littman,  M. L.\">\n<meta name=\"citation_author\" content=\"Moore,  A. W.\">\n<meta name=\"citation_publication_date\" content=\"1996\">\n<meta name=\"citation_journal_title\" content=\"Journal of Artificial Intelligence Research\">\n<meta name=\"citation_firstpage\" content=\"237\">\n<meta name=\"citation_lastpage\" content=\"285\">\n<meta name=\"citation_volume\" content=\"4\">\n<meta name=\"citation_issn\" content=\"1076 - 9757\">\n<meta name=\"citation_pdf_url\" content=\"http://www.jair.org/media/301/live-301-1562-jair.pdf\">\n</div>\n</div>\n",
+    "rule_id": "ef2b2326-f72a-4433-8a5e-6bf3bf4f5d50",
+    "sequence": [
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 3166,
+            "extract": "Amarda Shehu and Erion Plaku",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 3135
+          },
+          "four_digit_year2": {
+            "end_index": 3171,
+            "extract": "2016",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 3167
+          },
+          "\"3": {
+            "end_index": 3302,
+            "extract": "A Survey of Computational Treatments of Biomolecules by Robotics-Inspired Methods Modeling Equilibrium Structure and Dynamic",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 3174
+          },
+          "age4": {
+            "end_index": 3314,
+            "extract": "57",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 3311
+          },
+          "pages5": {
+            "end_index": 3329,
+            "extract": "509-572",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 3321
+          },
+          "PDF15": {
+            "end_index": 3486,
+            "extract": "",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 3486
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 3955,
+            "extract": "5040",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 3541
+          }
+        },
+        "extract": "Amarda Shehu and Erion Plaku (2016) \"A Survey of Computational Treatments of Biomolecules by Robotics-Inspired Methods Modeling Equilibrium Structure and Dynamic\", Volume 57, pages 509-572</cite> <p class=\"media\"><a href=\"/papers/paper5040.html\">Abstract</a> | <a href=\"/media/5040/live-5040-9643-jair.pdf\">PDF</a> | <a href=\"http://dx.doi.org/10.1613/jair.5040\">doi:10.1613/jair.5040</a>",
+        "begin_index": 3135,
+        "sequence_number": 1,
+        "end_index": 3549
+      },
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 4291,
+            "extract": "Yoav Goldberg",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 4276
+          },
+          "four_digit_year2": {
+            "end_index": 4296,
+            "extract": "2016",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 4292
+          },
+          "\"3": {
+            "end_index": 4364,
+            "extract": "A Primer on Neural Network Models for Natural Language Processing",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 4299
+          },
+          "age4": {
+            "end_index": 4376,
+            "extract": "57",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 4373
+          },
+          "pages5": {
+            "end_index": 4391,
+            "extract": "345-420",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 4383
+          },
+          "PDF15": {
+            "end_index": 4548,
+            "extract": "",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 4548
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 4938,
+            "extract": "4992",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 4603
+          }
+        },
+        "extract": "Yoav Goldberg (2016) \"A Primer on Neural Network Models for Natural Language Processing\", Volume 57, pages 345-420</cite> <p class=\"media\"><a href=\"/papers/paper4992.html\">Abstract</a> | <a href=\"/media/4992/live-4992-9623-jair.pdf\">PDF</a> | <a href=\"http://dx.doi.org/10.1613/jair.4992\">doi:10.1613/jair.4992</a>",
+        "begin_index": 4276,
+        "sequence_number": 2,
+        "end_index": 4611
+      },
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 5389,
+            "extract": "Raffaella Bernardi, Ruket Cakici, Desmond Elliott, Aykut Erdem, Erkut Erdem, Nazli Ikizler-Cinbis, Frank Keller, Adrian Muscat and Barbara Plank",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 5235
+          },
+          "four_digit_year2": {
+            "end_index": 5394,
+            "extract": "2016",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 5390
+          },
+          "\"3": {
+            "end_index": 5496,
+            "extract": "Automatic Description Generation from Images: A Survey of Models, Datasets, and Evaluation Measures",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 5397
+          },
+          "age4": {
+            "end_index": 5508,
+            "extract": "55",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 5505
+          },
+          "pages5": {
+            "end_index": 5523,
+            "extract": "409-442",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 5515
+          },
+          "PDF15": {
+            "end_index": 5752,
+            "extract": "PostScript |",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 5680
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 6387,
+            "extract": "4900",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 5807
+          }
+        },
+        "extract": "Raffaella Bernardi, Ruket Cakici, Desmond Elliott, Aykut Erdem, Erkut Erdem, Nazli Ikizler-Cinbis, Frank Keller, Adrian Muscat and Barbara Plank (2016) \"Automatic Description Generation from Images: A Survey of Models, Datasets, and Evaluation Measures\", Volume 55, pages 409-442</cite> <p class=\"media\"><a href=\"/papers/paper4900.html\">Abstract</a> | <a href=\"/media/4900/live-4900-9139-jair.pdf\">PDF</a> | <a href=\"/media/4900/live-4900-9140-jair.ps\">PostScript</a> | <a href=\"http://dx.doi.org/10.1613/jair.4900\">doi:10.1613/jair.4900</a>",
+        "begin_index": 5235,
+        "sequence_number": 3,
+        "end_index": 5815
+      },
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 6977,
+            "extract": "Daan Bloembergen, Karl Tuyls, Daniel Hennes and Michael Kaisers",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 6909
+          },
+          "four_digit_year2": {
+            "end_index": 6982,
+            "extract": "2015",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 6978
+          },
+          "\"3": {
+            "end_index": 7040,
+            "extract": "Evolutionary Dynamics of Multi-Agent Learning: A Survey",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 6985
+          },
+          "age4": {
+            "end_index": 7052,
+            "extract": "53",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 7049
+          },
+          "pages5": {
+            "end_index": 7067,
+            "extract": "659-697",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 7059
+          },
+          "PDF15": {
+            "end_index": 7296,
+            "extract": "PostScript |",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 7224
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 7801,
+            "extract": "4818",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 7351
+          }
+        },
+        "extract": "Daan Bloembergen, Karl Tuyls, Daniel Hennes and Michael Kaisers (2015) \"Evolutionary Dynamics of Multi-Agent Learning: A Survey\", Volume 53, pages 659-697</cite> <p class=\"media\"><a href=\"/papers/paper4818.html\">Abstract</a> | <a href=\"/media/4818/live-4818-8818-jair.pdf\">PDF</a> | <a href=\"/media/4818/live-4818-8819-jair.ps\">PostScript</a> | <a href=\"http://dx.doi.org/10.1613/jair.4818\">doi:10.1613/jair.4818</a>",
+        "begin_index": 6909,
+        "sequence_number": 4,
+        "end_index": 7359
+      },
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 8170,
+            "extract": "C. R. Shelton and G. Ciardo",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 8140
+          },
+          "four_digit_year2": {
+            "end_index": 8175,
+            "extract": "2014",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 8171
+          },
+          "\"3": {
+            "end_index": 8233,
+            "extract": "Tutorial on Structured Continuous-Time Markov Processes",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 8178
+          },
+          "age4": {
+            "end_index": 8245,
+            "extract": "51",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 8242
+          },
+          "pages5": {
+            "end_index": 8260,
+            "extract": "725-778",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 8252
+          },
+          "PDF15": {
+            "end_index": 8417,
+            "extract": "",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 8417
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 8812,
+            "extract": "4415",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 8472
+          }
+        },
+        "extract": "C. R. Shelton and G. Ciardo (2014) \"Tutorial on Structured Continuous-Time Markov Processes\", Volume 51, pages 725-778</cite> <p class=\"media\"><a href=\"/papers/paper4415.html\">Abstract</a> | <a href=\"/media/4415/live-4415-8366-jair.pdf\">PDF</a> | <a href=\"http://dx.doi.org/10.1613/jair.4415\">doi:10.1613/jair.4415</a>",
+        "begin_index": 8140,
+        "sequence_number": 5,
+        "end_index": 8480
+      },
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 9162,
+            "extract": "J.D. Fernandez and F. Vico",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 9133
+          },
+          "four_digit_year2": {
+            "end_index": 9167,
+            "extract": "2013",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 9163
+          },
+          "\"3": {
+            "end_index": 9231,
+            "extract": "AI Methods in Algorithmic Composition: A Comprehensive Survey",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 9170
+          },
+          "age4": {
+            "end_index": 9243,
+            "extract": "48",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 9240
+          },
+          "pages5": {
+            "end_index": 9258,
+            "extract": "513-582",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 9250
+          },
+          "PDF15": {
+            "end_index": 9487,
+            "extract": "PostScript |",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 9415
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 9959,
+            "extract": "3908",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 9542
+          }
+        },
+        "extract": "J.D. Fernandez and F. Vico (2013) \"AI Methods in Algorithmic Composition: A Comprehensive Survey\", Volume 48, pages 513-582</cite> <p class=\"media\"><a href=\"/papers/paper3908.html\">Abstract</a> | <a href=\"/media/3908/live-3908-7454-jair.pdf\">PDF</a> | <a href=\"/media/3908/live-3908-7453-jair.ps\">PostScript</a> | <a href=\"http://dx.doi.org/10.1613/jair.3908\">doi:10.1613/jair.3908</a>",
+        "begin_index": 9133,
+        "sequence_number": 6,
+        "end_index": 9550
+      },
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 10278,
+            "extract": "D. M. Roijers, P. Vamplew, S. Whiteson and R. Dazeley",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 10220
+          },
+          "four_digit_year2": {
+            "end_index": 10283,
+            "extract": "2013",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 10279
+          },
+          "\"3": {
+            "end_index": 10340,
+            "extract": "A Survey of Multi-Objective Sequential Decision-Making",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 10286
+          },
+          "age4": {
+            "end_index": 10352,
+            "extract": "48",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 10349
+          },
+          "pages5": {
+            "end_index": 10366,
+            "extract": "67-113",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 10359
+          },
+          "PDF15": {
+            "end_index": 10595,
+            "extract": "PostScript |",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 10523
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 11088,
+            "extract": "3987",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 10650
+          }
+        },
+        "extract": "D. M. Roijers, P. Vamplew, S. Whiteson and R. Dazeley (2013) \"A Survey of Multi-Objective Sequential Decision-Making\", Volume 48, pages 67-113</cite> <p class=\"media\"><a href=\"/papers/paper3987.html\">Abstract</a> | <a href=\"/media/3987/live-3987-7363-jair.pdf\">PDF</a> | <a href=\"/media/3987/live-3987-7364-jair.ps\">PostScript</a> | <a href=\"http://dx.doi.org/10.1613/jair.3987\">doi:10.1613/jair.3987</a>",
+        "begin_index": 10220,
+        "sequence_number": 7,
+        "end_index": 10658
+      },
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 11477,
+            "extract": "R. Mourad, C. Sinoquet, N. L. Zhang, T. Liu and P. Leray",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 11415
+          },
+          "four_digit_year2": {
+            "end_index": 11482,
+            "extract": "2013",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 11478
+          },
+          "\"3": {
+            "end_index": 11532,
+            "extract": "A Survey on Latent Tree Models and Applications",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 11485
+          },
+          "age4": {
+            "end_index": 11544,
+            "extract": "47",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 11541
+          },
+          "pages5": {
+            "end_index": 11559,
+            "extract": "157-203",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 11551
+          },
+          "PDF15": {
+            "end_index": 11788,
+            "extract": "PostScript |",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 11716
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 12279,
+            "extract": "3879",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 11843
+          }
+        },
+        "extract": "R. Mourad, C. Sinoquet, N. L. Zhang, T. Liu and P. Leray (2013) \"A Survey on Latent Tree Models and Applications\", Volume 47, pages 157-203</cite> <p class=\"media\"><a href=\"/papers/paper3879.html\">Abstract</a> | <a href=\"/media/3879/live-3879-7058-jair.pdf\">PDF</a> | <a href=\"/media/3879/live-3879-7057-jair.ps\">PostScript</a> | <a href=\"http://dx.doi.org/10.1613/jair.3879\">doi:10.1613/jair.3879</a>",
+        "begin_index": 11415,
+        "sequence_number": 8,
+        "end_index": 11851
+      },
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 12715,
+            "extract": "R. A. Rossi, L. K. McDowell, D. W. Aha and J. Neville",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 12657
+          },
+          "four_digit_year2": {
+            "end_index": 12720,
+            "extract": "2012",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 12716
+          },
+          "\"3": {
+            "end_index": 12782,
+            "extract": "Transforming Graph Data for Statistical Relational Learning",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 12723
+          },
+          "age4": {
+            "end_index": 12794,
+            "extract": "45",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 12791
+          },
+          "pages5": {
+            "end_index": 12809,
+            "extract": "363-441",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 12801
+          },
+          "PDF15": {
+            "end_index": 13038,
+            "extract": "PostScript |",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 12966
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 13537,
+            "extract": "3659",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 13093
+          }
+        },
+        "extract": "R. A. Rossi, L. K. McDowell, D. W. Aha and J. Neville (2012) \"Transforming Graph Data for Statistical Relational Learning\", Volume 45, pages 363-441</cite> <p class=\"media\"><a href=\"/papers/paper3659.html\">Abstract</a> | <a href=\"/media/3659/live-3659-6589-jair.pdf\">PDF</a> | <a href=\"/media/3659/live-3659-6588-jair.ps\">PostScript</a> | <a href=\"http://dx.doi.org/10.1613/jair.3659\">doi:10.1613/jair.3659</a>",
+        "begin_index": 12657,
+        "sequence_number": 9,
+        "end_index": 13101
+      },
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 13896,
+            "extract": "A. M. Rush and M. J. Collins",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 13864
+          },
+          "four_digit_year2": {
+            "end_index": 13901,
+            "extract": "2012",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 13897
+          },
+          "\"3": {
+            "end_index": 14007,
+            "extract": "A Tutorial on Dual Decomposition and Lagrangian Relaxation for Inference in Natural Language Processing",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 13904
+          },
+          "age4": {
+            "end_index": 14019,
+            "extract": "45",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 14016
+          },
+          "pages5": {
+            "end_index": 14034,
+            "extract": "305-362",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 14026
+          },
+          "PDF15": {
+            "end_index": 14263,
+            "extract": "PostScript |",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 14191
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 14780,
+            "extract": "3680",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 14318
+          }
+        },
+        "extract": "A. M. Rush and M. J. Collins (2012) \"A Tutorial on Dual Decomposition and Lagrangian Relaxation for Inference in Natural Language Processing\", Volume 45, pages 305-362</cite> <p class=\"media\"><a href=\"/papers/paper3680.html\">Abstract</a> | <a href=\"/media/3680/live-3680-6584-jair.pdf\">PDF</a> | <a href=\"/media/3680/live-3680-6585-jair.ps\">PostScript</a> | <a href=\"http://dx.doi.org/10.1613/jair.3680\">doi:10.1613/jair.3680</a>",
+        "begin_index": 13864,
+        "sequence_number": 10,
+        "end_index": 14326
+      },
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 15082,
+            "extract": "I. Androutsopoulos and P. Malakasiotis",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 15041
+          },
+          "four_digit_year2": {
+            "end_index": 15087,
+            "extract": "2010",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 15083
+          },
+          "\"3": {
+            "end_index": 15145,
+            "extract": "A Survey of Paraphrasing and Textual Entailment Methods",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 15090
+          },
+          "age4": {
+            "end_index": 15157,
+            "extract": "38",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 15154
+          },
+          "pages5": {
+            "end_index": 15172,
+            "extract": "135-187",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 15164
+          },
+          "PDF15": {
+            "end_index": 15401,
+            "extract": "PostScript |",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 15329
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 15879,
+            "extract": "2985",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 15456
+          }
+        },
+        "extract": "I. Androutsopoulos and P. Malakasiotis (2010) \"A Survey of Paraphrasing and Textual Entailment Methods\", Volume 38, pages 135-187</cite> <p class=\"media\"><a href=\"/papers/paper2985.html\">Abstract</a> | <a href=\"/media/2985/live-2985-5001-jair.pdf\">PDF</a> | <a href=\"/media/2985/live-2985-5000-jair.ps\">PostScript</a> | <a href=\"http://dx.doi.org/10.1613/jair.2985\">doi:10.1613/jair.2985</a>",
+        "begin_index": 15041,
+        "sequence_number": 11,
+        "end_index": 15464
+      },
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 16157,
+            "extract": "P. D. Turney and P. Pantel",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 16128
+          },
+          "four_digit_year2": {
+            "end_index": 16162,
+            "extract": "2010",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 16158
+          },
+          "\"3": {
+            "end_index": 16224,
+            "extract": "From Frequency to Meaning: Vector Space Models of Semantics",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 16165
+          },
+          "age4": {
+            "end_index": 16236,
+            "extract": "37",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 16233
+          },
+          "pages5": {
+            "end_index": 16251,
+            "extract": "141-188",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 16243
+          },
+          "PDF15": {
+            "end_index": 16480,
+            "extract": "PostScript |",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 16408
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 16950,
+            "extract": "2934",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 16535
+          }
+        },
+        "extract": "P. D. Turney and P. Pantel (2010) \"From Frequency to Meaning: Vector Space Models of Semantics\", Volume 37, pages 141-188</cite> <p class=\"media\"><a href=\"/papers/paper2934.html\">Abstract</a> | <a href=\"/media/2934/live-2934-4846-jair.pdf\">PDF</a> | <a href=\"/media/2934/live-2934-4845-jair.ps\">PostScript</a> | <a href=\"http://dx.doi.org/10.1613/jair.2934\">doi:10.1613/jair.2934</a>",
+        "begin_index": 16128,
+        "sequence_number": 12,
+        "end_index": 16543
+      },
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 17261,
+            "extract": "H. E. Dixon, M. L. Ginsberg and A. J. Parkes",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 17211
+          },
+          "four_digit_year2": {
+            "end_index": 17266,
+            "extract": "2004",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 17262
+          },
+          "\"3": {
+            "end_index": 17346,
+            "extract": "Generalizing Boolean Satisfiability I: Background and Survey of Existing Work",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 17269
+          },
+          "age4": {
+            "end_index": 17358,
+            "extract": "21",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 17355
+          },
+          "pages5": {
+            "end_index": 17373,
+            "extract": "193-243",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 17365
+          },
+          "PDF15": {
+            "end_index": 17761,
+            "extract": "PostScript | HTML |",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 17530
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 18429,
+            "extract": "1353",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 17816
+          }
+        },
+        "extract": "H. E. Dixon, M. L. Ginsberg and A. J. Parkes (2004) \"Generalizing Boolean Satisfiability I: Background and Survey of Existing Work\", Volume 21, pages 193-243</cite> <p class=\"media\"><a href=\"/papers/paper1353.html\">Abstract</a> | <a href=\"/media/1353/live-1353-2285-jair.pdf\">PDF</a> | <a href=\"/media/1353/live-1353-2284-jair.ps.Z\">PostScript</a> | <a href=\"http://www.cs.cmu.edu/afs/cs/project/jair/pub/volume21/dixon04a-html/zap1.html\" onclick=\"window.open(this.href);return false;\">HTML</a> | <a href=\"http://dx.doi.org/10.1613/jair.1353\">doi:10.1613/jair.1353</a>",
+        "begin_index": 17211,
+        "sequence_number": 13,
+        "end_index": 17824
+      },
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 18611,
+            "extract": "L. P. Kaelbling, M. L. Littman and A. W. Moore",
+            "rule_id": "4ef503eb-fc90-4155-9f0d-8ba3c88a23a7",
+            "begin_index": 18559
+          },
+          "four_digit_year2": {
+            "end_index": 18616,
+            "extract": "1996",
+            "rule_id": "df4cc048-2ff3-4184-898f-66c47567d85c",
+            "begin_index": 18612
+          },
+          "\"3": {
+            "end_index": 18652,
+            "extract": "Reinforcement Learning: A Survey",
+            "rule_id": "68c845c3-fe23-41ac-b6f9-03c6f4a1b896",
+            "begin_index": 18619
+          },
+          "age4": {
+            "end_index": 18663,
+            "extract": "4",
+            "rule_id": "ea2d8438-4f62-4040-8901-a7d4f7d800f6",
+            "begin_index": 18661
+          },
+          "pages5": {
+            "end_index": 18678,
+            "extract": "237-285",
+            "rule_id": "d0176612-df13-4fcf-ae22-95759dd506ba",
+            "begin_index": 18670
+          },
+          "PDF15": {
+            "end_index": 19067,
+            "extract": "PostScript | HTML |",
+            "rule_id": "2e5e5739-5e55-467d-b1d8-f17c56f58374",
+            "begin_index": 18832
+          },
+          "doi:10.1613/jair.20": {
+            "end_index": 19690,
+            "extract": "301",
+            "rule_id": "e3ee9d26-31ba-4a28-b0db-3929ee22228f",
+            "begin_index": 19121
+          }
+        },
+        "extract": "L. P. Kaelbling, M. L. Littman and A. W. Moore (1996) \"Reinforcement Learning: A Survey\", Volume 4, pages 237-285</cite> <p class=\"media\"><a href=\"/papers/paper301.html\">Abstract</a> | <a href=\"/media/301/live-301-1562-jair.pdf\">PDF</a> | <a href=\"/media/301/live-301-1561-jair.ps\">PostScript</a> | <a href=\"http://www.cs.cmu.edu/afs/cs/project/jair/pub/volume4/kaelbling96a-html/rl-survey.html\" onclick=\"window.open(this.href);return false;\">HTML</a> | <a href=\"http://dx.doi.org/10.1613/jair.301\">doi:10.1613/jair.301</a>",
+        "begin_index": 18559,
+        "sequence_number": 14,
+        "end_index": 19128
+      }
+    ],
+    "begin_index": 3135
+  },
+  "_div_list0003": {
+    "end_index": 2241,
+    "extract": "Manuel  Bodirsky and Peter  Jonsson (2017) \"A Model-Theoretic View on Qualitative Constraint Reasoning\", Volume 58, pages 339-385",
+    "rule_id": "0fd3abc7-146f-4ee4-a271-00455bc4f1a7",
+    "sequence": [
+      {
+        "sub_rules": {
+          "1": {
+            "end_index": 2148,
+            "extract": "Manuel Bodirsky and Peter Jonsson",
+            "rule_id": "ccf93097-eb41-4c15-9467-92a2b124a4cc",
+            "begin_index": 2112
+          },
+          "four_digit_year2": {
+            "end_index": 2153,
+            "extract": "2017",
+            "rule_id": "eddb1d1d-3e9f-4f02-b56d-1feb176c63e1",
+            "begin_index": 2149
+          },
+          "\"3": {
+            "end_index": 2214,
+            "extract": "A Model-Theoretic View on Qualitative Constraint Reasoning",
+            "rule_id": "1b75ef14-e15c-4a8b-8454-08fa019b3157",
+            "begin_index": 2156
+          },
+          "age4": {
+            "end_index": 2226,
+            "extract": "58",
+            "rule_id": "551a4b3c-7158-4566-be90-f3e5a879b696",
+            "begin_index": 2223
+          },
+          "pages5": {
+            "end_index": 2237,
+            "extract": "339",
+            "rule_id": "d5b1bb31-82f1-4fd8-9b31-bb397848b961",
+            "begin_index": 2233
+          },
+          "age6": {
+            "end_index": 2367,
+            "extract": "385",
+            "rule_id": "d110ef7b-6178-4918-9036-1915a8cf3156",
+            "begin_index": 2238
+          }
+        },
+        "extract": "Manuel Bodirsky and Peter Jonsson (2017) \"A Model-Theoretic View on Qualitative Constraint Reasoning\", Volume 58, pages 339-385",
+        "begin_index": 2112,
+        "sequence_number": 1,
+        "end_index": 2241
+      }
+    ],
+    "begin_index": 2112
+  }
+}

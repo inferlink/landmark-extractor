@@ -4,6 +4,7 @@ import re, json
 import abc
 import codecs
 import cgi
+import uuid
 from landmark_extractor.postprocessing.PostProcessor import RemoveExtraSpaces, RemoveHtml
 from collections import OrderedDict
 
@@ -77,7 +78,7 @@ def loadRule(rule_json_object):
     
     if 'strip_end_regex' in rule_json_object:
         strip_end_regex = rule_json_object['strip_end_regex']
-            
+    
     """ This is where we add our new type """
     if rule_type == ITEM_RULE or rule_type == 'RegexRule':
         begin_regex = rule_json_object['begin_regex']
@@ -99,6 +100,10 @@ def loadRule(rule_json_object):
                                   include_end_regex, strip_end_regex, no_first_begin_iter_rule,
                                   no_last_end_iter_rule, validation_regex, required, removehtml,
                                   sub_rules)
+    
+    if 'id' in rule_json_object:
+        rule.id = rule_json_object['id']
+    
     return rule
     
 class Rule:
@@ -143,6 +148,7 @@ class Rule:
         self.visible_chunk_after = visible_chunk_after
     
     def __init__(self, name, validation_regex = None, required = False, removehtml = False, sub_rules = None):
+        self.id = str(uuid.uuid4())
         self.name = name
         self.validation_regex = None
         if validation_regex:
@@ -196,13 +202,14 @@ class ItemRule(Rule):
             extract = ''
             begin_index = -1
             end_index = -1
-        return {'extract': extract,'begin_index':begin_index,'end_index':end_index}
+        return {'rule_id': self.id,'extract': extract,'begin_index':begin_index,'end_index':end_index}
     
     def toolTip(self):
         return 'BEGIN RULE: ' + cgi.escape(self.begin_rule.pattern) + '<hr>END RULE: ' + cgi.escape(self.end_rule.pattern)
     
     def toJson(self):
         json_dict = {}
+        json_dict['id'] = self.id
         json_dict['name'] = self.name
         json_dict['rule_type'] = ITEM_RULE
         json_dict['begin_regex'] = self.begin_regex
@@ -297,10 +304,12 @@ class IterationRule(ItemRule):
             extract['extract'] = self.remove_html(extract['extract'])
         
         base_extract['sequence'] = extracts
+        base_extract['rule_id'] = self.id
         return base_extract
     
     def toJson(self):
         json_dict = {}
+        json_dict['id'] = self.id
         json_dict['name'] = self.name
         json_dict['rule_type'] = ITERATION_RULE
         json_dict['begin_regex'] = self.begin_regex
