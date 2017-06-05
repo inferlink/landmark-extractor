@@ -1,0 +1,39 @@
+{
+    "2e5e5739-5e55-467d-b1d8-f17c56f58374": [
+      {
+        "param": null,
+        "type": "RULE2"
+      },
+      {
+        "param": "p1",
+        "type": "RULE1"
+      }
+    ],
+    "91241921-f0f3-462e-ab44-564191d943d5": [
+      {
+        "param": null,
+        "type": "RULE2"
+      },
+      {
+        "param": "p1",
+        "type": "RULE1"
+      }
+    ],
+    "ea2d8438-4f62-4040-8901-a7d4f7d800f6": [
+      {
+        "param": "p1",
+        "type": "RULE3"
+      }
+    ],
+    "ef2b2326-f72a-4433-8a5e-6bf3bf4f5d50": [
+      {
+        "param": "p3",
+        "type": "RULE1"
+      },
+      {
+        "param": "0",
+        "type": "MIN_ROWS"
+      }
+    ]
+  }
+
