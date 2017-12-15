@@ -269,28 +269,59 @@ class IterationRule(ItemRule):
         extracts = []
         start_index = 0
         begin_match_end = -1
-        while start_index < len(start_page_string):
-            try:
-                if start_index == 0 and self.no_first_begin_iter_rule:
-                    begin_match_end = 0
-                else:
-                    begin_match = self.iter_begin_rule.search(start_page_string[start_index:])
-                    begin_match_end = begin_match.end()
-                
-                end_match = self.iter_end_rule.search(start_page_string[start_index+begin_match_end:])
-                value = start_page_string[start_index+begin_match_end:start_index+begin_match_end+end_match.start()]
-                if 0 < len(value.strip()) < MAX_EXTRACT_LENGTH:
-                    extracts.append({'extract':value,'begin_index':start_index+begin_match_end+base_extract['begin_index'],'end_index':start_index+begin_match_end+end_match.start()+base_extract['begin_index'],'sequence_number':sequence_number})
-                    sequence_number = sequence_number + 1
-                start_index = start_index+begin_match_end+end_match.start()
-            except:
-                if self.no_last_end_iter_rule and begin_match_end >= 0:
-                    end_match_start = len(start_page_string)
-                    value = start_page_string[start_index+begin_match_end:start_index+begin_match_end+end_match_start]
+        if self.iter_end_regex:
+            while start_index < len(start_page_string):
+                try:
+                    prev_index = start_index
+                    if start_index == 0 and self.no_first_begin_iter_rule:
+                        begin_match_end = 0
+                    else:
+                        begin_match = self.iter_begin_rule.search(start_page_string[start_index:])
+                        begin_match_end = begin_match.end()
+
+                    end_match = self.iter_end_rule.search(start_page_string[start_index+begin_match_end:])
+                    value = start_page_string[start_index+begin_match_end:start_index+begin_match_end+end_match.start()]
                     if 0 < len(value.strip()) < MAX_EXTRACT_LENGTH:
-                        extracts.append({'extract':value,'begin_index':start_index+begin_match_end+base_extract['begin_index'],'end_index':start_index+begin_match_end+end_match_start+base_extract['begin_index'],'sequence_number':sequence_number})
+                        extracts.append({'extract':value,'begin_index':start_index+begin_match_end+base_extract['begin_index'],'end_index':start_index+begin_match_end+end_match.start()+base_extract['begin_index'],'sequence_number':sequence_number})
                         sequence_number = sequence_number + 1
-                start_index = len(start_page_string)
+                    start_index = start_index+begin_match_end+end_match.start()
+                    if prev_index == start_index:
+                        start_index+= max(1, end_match.end())
+                except:
+                    if self.no_last_end_iter_rule and begin_match_end >= 0:
+                        end_match_start = len(start_page_string)
+                        value = start_page_string[start_index+begin_match_end:start_index+begin_match_end+end_match_start]
+                        if 0 < len(value.strip()) < MAX_EXTRACT_LENGTH:
+                            extracts.append({'extract':value,'begin_index':start_index+begin_match_end+base_extract['begin_index'],'end_index':start_index+begin_match_end+end_match_start+base_extract['begin_index'],'sequence_number':sequence_number})
+                            sequence_number = sequence_number + 1
+                    start_index = len(start_page_string)
+
+        else:
+            while start_index < len(start_page_string):
+                try:
+                    end_match = self.iter_begin_rule.search(start_page_string[start_index:])
+                    value = start_page_string[
+                            start_index:start_index + end_match.end()]
+                    if 0 < len(value.strip()) < MAX_EXTRACT_LENGTH:
+                        extracts.append({'extract': value,
+                                         'begin_index': start_index + base_extract['begin_index'],
+                                         'end_index': start_index + end_match.end() + base_extract[
+                                             'begin_index'], 'sequence_number': sequence_number})
+                        sequence_number = sequence_number + 1
+                    start_index = start_index + end_match.end()
+                except:
+                    if self.no_last_end_iter_rule and start_index >= 0:
+                        end_match_end = len(start_page_string)
+                        value = start_page_string[
+                                start_index:start_index + end_match_end]
+                        if 0 < len(value.strip()) < MAX_EXTRACT_LENGTH:
+                            extracts.append({'extract': value,
+                                             'begin_index': start_index + base_extract['begin_index'],
+                                             'end_index': start_index + end_match_end +
+                                                          base_extract['begin_index'],
+                                             'sequence_number': sequence_number})
+                            sequence_number = sequence_number + 1
+                    start_index = len(start_page_string)
         
         if self.sub_rules:
             for extract in extracts:
@@ -332,17 +363,17 @@ class IterationRule(ItemRule):
         return True
     
     def __init__(self, name, begin_regex, end_regex, iter_begin_regex,
-                 iter_end_regex, include_end_regex = False, backwards_end_regex = None, 
+                 iter_end_regex = None, include_end_regex = False, backwards_end_regex = None,
                  no_first_begin_iter_rule = False, no_last_end_iter_rule = False,
                  validation_regex = None, required = False, removehtml = False, sub_rules = None):
         
         ItemRule.__init__(self, name, begin_regex, end_regex, include_end_regex,
                           backwards_end_regex, validation_regex, required, removehtml, sub_rules)
-        
         self.iter_begin_regex = iter_begin_regex
         self.iter_end_regex = iter_end_regex
         self.iter_begin_rule = re.compile(iter_begin_regex, re.S)
-        self.iter_end_rule = re.compile(iter_end_regex, re.S)
+        if self.iter_end_regex:
+            self.iter_end_rule = re.compile(iter_end_regex, re.S)
         self.no_first_begin_iter_rule = no_first_begin_iter_rule
         self.no_last_end_iter_rule = no_last_end_iter_rule
 

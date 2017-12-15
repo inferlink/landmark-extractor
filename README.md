@@ -126,10 +126,10 @@ There are two types of rules currently that can be used to extract information f
 ```
 * name: the name of this rule
 * rule_type: RegexRule
-* begin_regex: The quote escaped regular expression to get to the beginning of where you would like to extract.
-* end_regex: The quote escaped regular expression to get to the end of where you would like to extract (starting from the end of begin_regex).
-* iter_begin_regex: The quote escaped regular expression for the beginning of EACH item to be repeated.
-* iter_end_regex: The quote escaped regular expression for the end EACH item to be repeated (starting from the end of each iter_begin_regex).
+* begin_regex: The quote escaped regular expression to get to the beginning of where you would like to extract, not included in extraction.
+* end_regex: The quote escaped regular expression to get to the end of where you would like to extract (starting from the end of begin_regex).  Excluded from extraction by default.
+* iter_begin_regex: The quote escaped regular expression for the beginning of EACH item to be repeated, not included in extraction.  Or if iter_end_regex is not provided, matches up until the end of EACH item to be repeated.
+* iter_end_regex [Optional]: The quote escaped regular expression for the end EACH item to be repeated, not included in extraction (starting from the end of each iter_begin_regex).
 * no_first_begin_iter_rule [Optional]: Boolean which defines if the iter_begin_regex should be used for the FIRST element of the list
 * no_last_end_iter_rule [Optional]: Boolean which defines if the iter_end_regex should be used for the LAST element of the list
 
