@@ -1,6 +1,7 @@
 import sys
 import getopt
-import re, json
+import json
+import regex as re
 import abc
 import codecs
 import cgi
@@ -269,7 +270,7 @@ class IterationRule(ItemRule):
         extracts = []
         start_index = 0
         begin_match_end = -1
-        if self.iter_end_regex:
+        if self.iter_end_regex is not None:
             while start_index < len(start_page_string):
                 try:
                     prev_index = start_index
@@ -296,7 +297,7 @@ class IterationRule(ItemRule):
                             sequence_number = sequence_number + 1
                     start_index = len(start_page_string)
 
-        else:
+        elif self.iter_begin_regex:
             while start_index < len(start_page_string):
                 try:
                     end_match = self.iter_begin_rule.search(start_page_string[start_index:])
