@@ -6,7 +6,7 @@ config = {
     'author': 'InferLink',
     'url': 'https://github.com/inferlink/landmark-extractor',
     'download_url': 'https://github.com/inferlink/landmark-extractor',
-    'author_email': 'developers@inferlink.com ',
+    'author_email': 'developers@inferlink.com',
     'version': '0.1.7.0',
     'license': 'GNU AGPL',
     'packages': find_packages(),
