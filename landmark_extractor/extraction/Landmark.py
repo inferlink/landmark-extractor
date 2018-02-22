@@ -62,6 +62,9 @@ def loadRule(rule_json_object):
     include_end_regex = False #Default to false for bakward compatibility
     strip_end_regex = None
     sub_rules = []
+    begin_stripe_id = None
+    end_stripe_id = None
+
     if 'sub_rules' in rule_json_object:
         sub_rules = rule_json_object['sub_rules']
     
@@ -79,12 +82,19 @@ def loadRule(rule_json_object):
     
     if 'strip_end_regex' in rule_json_object:
         strip_end_regex = rule_json_object['strip_end_regex']
+
+    if 'begin_stripe_id' in rule_json_object:
+        begin_stripe_id = rule_json_object['begin_stripe_id']
+
+    if 'end_stripe_id' in rule_json_object:
+        end_stripe_id = rule_json_object['end_stripe_id']
     
     """ This is where we add our new type """
     if rule_type == ITEM_RULE or rule_type == 'RegexRule':
         begin_regex = rule_json_object['begin_regex']
         end_regex = rule_json_object['end_regex']
-        rule = ItemRule(name, begin_regex, end_regex, include_end_regex, strip_end_regex, validation_regex, required, removehtml, sub_rules)
+        rule = ItemRule(name, begin_regex, end_regex, include_end_regex, strip_end_regex, validation_regex, required,
+                        removehtml, sub_rules, begin_stripe_id, end_stripe_id)
     if rule_type == ITERATION_RULE or rule_type == 'RegexIterationRule':
         begin_regex = rule_json_object['begin_regex']
         end_regex = rule_json_object['end_regex']
@@ -218,6 +228,10 @@ class ItemRule(Rule):
         json_dict['end_regex'] = self.end_regex
         json_dict['strip_end_regex'] = self.strip_end_regex
         json_dict['removehtml'] = self.removehtml
+        if self.begin_stripe_id:
+            json_dict['begin_stripe_id'] = self.begin_stripe_id
+        if self.end_stripe_id:
+            json_dict['end_stripe_id'] = self.end_stripe_id
         if self.required:
             json_dict['required'] = self.required
         if self.validation_regex:
@@ -249,7 +263,7 @@ class ItemRule(Rule):
     
     def __init__(self, name, begin_regex, end_regex, include_end_regex = False,
                  strip_end_regex = None, validation_regex = None, required = False, removehtml = False,
-                 sub_rules = None):
+                 sub_rules = None, begin_stripe_id = None, end_stripe_id = None):
         Rule.__init__(self, name, validation_regex, required, removehtml, sub_rules)
         self.begin_rule = re.compile(begin_regex, re.S)
         self.end_rule = re.compile(end_regex, re.S)
@@ -258,6 +272,8 @@ class ItemRule(Rule):
         self.end_regex = end_regex
         self.include_end_regex = include_end_regex
         self.strip_end_regex = strip_end_regex
+        self.begin_stripe_id = begin_stripe_id
+        self.end_stripe_id = end_stripe_id
         
 class IterationRule(ItemRule):
     
@@ -352,6 +368,10 @@ class IterationRule(ItemRule):
         json_dict['iter_end_regex'] = self.iter_end_regex
         json_dict['no_first_begin_iter_rule'] = self.no_first_begin_iter_rule
         json_dict['no_last_end_iter_rule'] = self.no_last_end_iter_rule
+        if self.begin_stripe_id:
+            json_dict['begin_stripe_id'] = self.begin_stripe_id
+        if self.end_stripe_id:
+            json_dict['end_stripe_id'] = self.end_stripe_id
         if self.sub_rules:
             json_dict['sub_rules'] = json.loads(self.sub_rules.toJson())
         return json.dumps(json_dict)
