@@ -64,6 +64,8 @@ def loadRule(rule_json_object):
     sub_rules = []
     begin_stripe_id = None
     end_stripe_id = None
+    begin_shift = 0
+    end_shift = 0
 
     if 'sub_rules' in rule_json_object:
         sub_rules = rule_json_object['sub_rules']
@@ -88,13 +90,19 @@ def loadRule(rule_json_object):
 
     if 'end_stripe_id' in rule_json_object:
         end_stripe_id = rule_json_object['end_stripe_id']
+
+    if 'begin_shift' in rule_json_object:
+        begin_shift = rule_json_object['begin_shift']
+
+    if 'end_shift' in rule_json_object:
+        end_shift = rule_json_object['end_shift']
     
     """ This is where we add our new type """
     if rule_type == ITEM_RULE or rule_type == 'RegexRule':
         begin_regex = rule_json_object['begin_regex']
         end_regex = rule_json_object['end_regex']
         rule = ItemRule(name, begin_regex, end_regex, include_end_regex, strip_end_regex, validation_regex, required,
-                        removehtml, sub_rules, begin_stripe_id, end_stripe_id)
+                        removehtml, sub_rules, begin_stripe_id, end_stripe_id, begin_shift, end_shift)
     if rule_type == ITERATION_RULE or rule_type == 'RegexIterationRule':
         begin_regex = rule_json_object['begin_regex']
         end_regex = rule_json_object['end_regex']
@@ -110,7 +118,7 @@ def loadRule(rule_json_object):
         rule = IterationRule(name, begin_regex, end_regex, iter_begin_regex, iter_end_regex,
                                   include_end_regex, strip_end_regex, no_first_begin_iter_rule,
                                   no_last_end_iter_rule, validation_regex, required, removehtml,
-                                  sub_rules)
+                                  sub_rules, begin_shift=begin_shift, end_shift=end_shift)
     
     if 'id' in rule_json_object:
         rule.id = rule_json_object['id']
@@ -228,6 +236,8 @@ class ItemRule(Rule):
         json_dict['end_regex'] = self.end_regex
         json_dict['strip_end_regex'] = self.strip_end_regex
         json_dict['removehtml'] = self.removehtml
+        json_dict['begin_shift'] = self.begin_shift
+        json_dict['end_shift'] = self.end_shift
         if self.begin_stripe_id:
             json_dict['begin_stripe_id'] = self.begin_stripe_id
         if self.end_stripe_id:
@@ -263,7 +273,7 @@ class ItemRule(Rule):
     
     def __init__(self, name, begin_regex, end_regex, include_end_regex = False,
                  strip_end_regex = None, validation_regex = None, required = False, removehtml = False,
-                 sub_rules = None, begin_stripe_id = None, end_stripe_id = None):
+                 sub_rules = None, begin_stripe_id = None, end_stripe_id = None, begin_shift = 0, end_shift = 0):
         Rule.__init__(self, name, validation_regex, required, removehtml, sub_rules)
         self.begin_rule = re.compile(begin_regex, re.S)
         self.end_rule = re.compile(end_regex, re.S)
@@ -274,6 +284,8 @@ class ItemRule(Rule):
         self.strip_end_regex = strip_end_regex
         self.begin_stripe_id = begin_stripe_id
         self.end_stripe_id = end_stripe_id
+        self.begin_shift = begin_shift
+        self.end_shift = end_shift
         
 class IterationRule(ItemRule):
     
@@ -368,6 +380,8 @@ class IterationRule(ItemRule):
         json_dict['iter_end_regex'] = self.iter_end_regex
         json_dict['no_first_begin_iter_rule'] = self.no_first_begin_iter_rule
         json_dict['no_last_end_iter_rule'] = self.no_last_end_iter_rule
+        json_dict['begin_shift'] = self.begin_shift
+        json_dict['end_shift'] = self.end_shift
         if self.begin_stripe_id:
             json_dict['begin_stripe_id'] = self.begin_stripe_id
         if self.end_stripe_id:
@@ -386,10 +400,11 @@ class IterationRule(ItemRule):
     def __init__(self, name, begin_regex, end_regex, iter_begin_regex,
                  iter_end_regex = None, include_end_regex = False, backwards_end_regex = None,
                  no_first_begin_iter_rule = False, no_last_end_iter_rule = False,
-                 validation_regex = None, required = False, removehtml = False, sub_rules = None):
+                 validation_regex = None, required = False, removehtml = False, sub_rules = None, begin_shift=0, end_shift=0):
         
         ItemRule.__init__(self, name, begin_regex, end_regex, include_end_regex,
-                          backwards_end_regex, validation_regex, required, removehtml, sub_rules)
+                          backwards_end_regex, validation_regex, required, removehtml, sub_rules,
+                          begin_shift=begin_shift, end_shift=end_shift)
         self.iter_begin_regex = iter_begin_regex
         self.iter_end_regex = iter_end_regex
         self.iter_begin_rule = re.compile(iter_begin_regex, re.S)
