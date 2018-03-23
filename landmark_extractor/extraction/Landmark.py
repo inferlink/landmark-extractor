@@ -62,6 +62,7 @@ def loadRule(rule_json_object):
     include_end_regex = False #Default to false for bakward compatibility
     strip_end_regex = None
     sub_rules = []
+    template_id = None
     begin_stripe_id = None
     end_stripe_id = None
     begin_shift = 0
@@ -85,6 +86,9 @@ def loadRule(rule_json_object):
     if 'strip_end_regex' in rule_json_object:
         strip_end_regex = rule_json_object['strip_end_regex']
 
+    if 'template_id' in rule_json_object:
+        template_id = rule_json_object['template_id']
+
     if 'begin_stripe_id' in rule_json_object:
         begin_stripe_id = rule_json_object['begin_stripe_id']
 
@@ -102,7 +106,7 @@ def loadRule(rule_json_object):
         begin_regex = rule_json_object['begin_regex']
         end_regex = rule_json_object['end_regex']
         rule = ItemRule(name, begin_regex, end_regex, include_end_regex, strip_end_regex, validation_regex, required,
-                        removehtml, sub_rules, begin_stripe_id, end_stripe_id, begin_shift, end_shift)
+                        removehtml, sub_rules, begin_stripe_id, end_stripe_id, begin_shift, end_shift, template_id=template_id)
     if rule_type == ITERATION_RULE or rule_type == 'RegexIterationRule':
         begin_regex = rule_json_object['begin_regex']
         end_regex = rule_json_object['end_regex']
@@ -118,7 +122,7 @@ def loadRule(rule_json_object):
         rule = IterationRule(name, begin_regex, end_regex, iter_begin_regex, iter_end_regex,
                                   include_end_regex, strip_end_regex, no_first_begin_iter_rule,
                                   no_last_end_iter_rule, validation_regex, required, removehtml,
-                                  sub_rules, begin_shift=begin_shift, end_shift=end_shift)
+                                  sub_rules, begin_shift=begin_shift, end_shift=end_shift, template_id=template_id)
     
     if 'id' in rule_json_object:
         rule.id = rule_json_object['id']
@@ -238,9 +242,11 @@ class ItemRule(Rule):
         json_dict['removehtml'] = self.removehtml
         json_dict['begin_shift'] = self.begin_shift
         json_dict['end_shift'] = self.end_shift
-        if self.begin_stripe_id:
+        if self.template_id is not None:
+            json_dict['template_id'] = self.template_id
+        if self.begin_stripe_id is not None:
             json_dict['begin_stripe_id'] = self.begin_stripe_id
-        if self.end_stripe_id:
+        if self.end_stripe_id is not None:
             json_dict['end_stripe_id'] = self.end_stripe_id
         if self.required:
             json_dict['required'] = self.required
@@ -273,7 +279,8 @@ class ItemRule(Rule):
     
     def __init__(self, name, begin_regex, end_regex, include_end_regex = False,
                  strip_end_regex = None, validation_regex = None, required = False, removehtml = False,
-                 sub_rules = None, begin_stripe_id = None, end_stripe_id = None, begin_shift = 0, end_shift = 0):
+                 sub_rules = None, begin_stripe_id = None, end_stripe_id = None, begin_shift = 0, end_shift = 0,
+                 template_id = None):
         Rule.__init__(self, name, validation_regex, required, removehtml, sub_rules)
         self.begin_rule = re.compile(begin_regex, re.S)
         self.end_rule = re.compile(end_regex, re.S)
@@ -286,6 +293,7 @@ class ItemRule(Rule):
         self.end_stripe_id = end_stripe_id
         self.begin_shift = begin_shift
         self.end_shift = end_shift
+        self.template_id = template_id
         
 class IterationRule(ItemRule):
     
@@ -380,8 +388,13 @@ class IterationRule(ItemRule):
         json_dict['iter_end_regex'] = self.iter_end_regex
         json_dict['no_first_begin_iter_rule'] = self.no_first_begin_iter_rule
         json_dict['no_last_end_iter_rule'] = self.no_last_end_iter_rule
-        json_dict['begin_shift'] = self.begin_shift
-        json_dict['end_shift'] = self.end_shift
+        json_dict['removehtml'] = self.removehtml
+        if self.template_id is not None:
+            json_dict['template_id'] = self.template_id
+        if self.begin_stripe_id is not None:
+            json_dict['begin_stripe_id'] = self.begin_stripe_id
+        if self.end_stripe_id is not None:
+            json_dict['end_stripe_id'] = self.end_stripe_id
         if self.begin_stripe_id:
             json_dict['begin_stripe_id'] = self.begin_stripe_id
         if self.end_stripe_id:
@@ -400,11 +413,12 @@ class IterationRule(ItemRule):
     def __init__(self, name, begin_regex, end_regex, iter_begin_regex,
                  iter_end_regex = None, include_end_regex = False, backwards_end_regex = None,
                  no_first_begin_iter_rule = False, no_last_end_iter_rule = False,
-                 validation_regex = None, required = False, removehtml = False, sub_rules = None, begin_shift=0, end_shift=0):
+                 validation_regex = None, required = False, removehtml = False, sub_rules = None, begin_shift=0, end_shift=0,
+                 template_id = None):
         
         ItemRule.__init__(self, name, begin_regex, end_regex, include_end_regex,
                           backwards_end_regex, validation_regex, required, removehtml, sub_rules,
-                          begin_shift=begin_shift, end_shift=end_shift)
+                          begin_shift=begin_shift, end_shift=end_shift, template_id=template_id)
         self.iter_begin_regex = iter_begin_regex
         self.iter_end_regex = iter_end_regex
         self.iter_begin_rule = re.compile(iter_begin_regex, re.S)
