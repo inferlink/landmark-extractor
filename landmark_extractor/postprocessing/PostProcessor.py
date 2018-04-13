@@ -5,9 +5,7 @@ def removeExtraSpaces(input_string):
     processor = RemoveExtraSpaces(input_string)
     return processor.post_process()
 
-class Processor(object):
-    __metaclass__ = abc.ABCMeta
-    
+class Processor(object, metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def post_process(self):
         pass

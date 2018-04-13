@@ -90,7 +90,7 @@ class ValidationRule:
         #print "in max_rows"
         #this is a list of rows
         rows = list_extraction['sequence']
-        print "rows:", len(rows)
+        print("rows:", len(rows))
         if len(rows) > int(max_rows):
             return False
         else:
@@ -336,7 +336,7 @@ def main(argv=None):
                     raise Usage(
                         'python validation/Validation.py [OPTIONAL_PARAMS] [FILE_WITH_VALIDATION] [FILE_WITH_EXTRACT]\n\t[OPTIONAL_PARAMS]: -s to return only true/false')
 
-        except getopt.error, msg:
+        except getopt.error as msg:
             raise Usage(msg)
 
         if len(args) != 2:
@@ -357,13 +357,13 @@ def main(argv=None):
 
         if simple:
             result = Validation.get_validation_for_page(new_page_json)
-            print json.dumps(result, indent=2, separators=(',', ': '))
+            print(json.dumps(result, indent=2, separators=(',', ': ')))
         else:
-            print json.dumps(new_page_json, indent=2, separators=(',', ': '))
+            print(json.dumps(new_page_json, indent=2, separators=(',', ': ')))
 
-    except Usage, err:
-        print >> sys.stderr, err.msg
-        print >> sys.stderr, "for help use --help"
+    except Usage as err:
+        print(err.msg, file=sys.stderr)
+        print("for help use --help", file=sys.stderr)
         return 2
 
 
