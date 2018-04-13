@@ -8,7 +8,7 @@ config = {
     'download_url': 'https://github.com/inferlink/landmark-extractor',
     'author_email': 'developers@inferlink.com',
     'version': '0.2.0.0',
-    'license': 'GNU AGPL',
+    'license': 'BSD-4-Clause',
     'packages': find_packages(),
     'classifiers': [],
     'install_requires': ['regex==2018.1.10']
