@@ -257,7 +257,7 @@ class ItemRule(Rule):
             json_dict['visible_chunk_after'] = self.visible_chunk_after
         if self.sub_rules:
             json_dict['sub_rules'] = json.loads(self.sub_rules.toJson())
-        return json.dumps(json_dict)
+        return json.dumps(json_dict, ensure_ascii=False)
     
     def validate(self, value):
         if self.validation_regex:
@@ -400,7 +400,7 @@ class IterationRule(ItemRule):
             json_dict['end_stripe_id'] = self.end_stripe_id
         if self.sub_rules:
             json_dict['sub_rules'] = json.loads(self.sub_rules.toJson())
-        return json.dumps(json_dict)
+        return json.dumps(json_dict, ensure_ascii=False)
     
     def validate(self, value):
         for single_value in value['sequence']:
@@ -461,7 +461,7 @@ class RuleSet:
         json_list = []
         for rule in self.rules:
             json_list.append(json.loads(rule.toJson()))
-        return json.dumps(json_list, indent=2, separators=(',', ': '))
+        return json.dumps(json_list, indent=2, separators=(',', ': '), ensure_ascii=False)
     
     #Must have over 50 chars and more than 50% html and on 50% of the pages through this one out
     def removeBadRules(self, pages):
