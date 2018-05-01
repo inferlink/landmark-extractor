@@ -32,6 +32,27 @@ def escape_regex_string(input_string):
                 s[i] = '\\' + c
     return input_string[:0].join(s)
 
+
+def minimizeResult(extraction_object):
+    minimized = {}
+    for name in extraction_object:
+        minimized[name] = {}
+        if 'sequence' in extraction_object[name]:
+            minimized[name] = []
+            for item in extraction_object[name]['sequence']:
+                if 'sub_rules' in item:
+                    minimized[name].append(minimizeResult(item['sub_rules']))
+        else:
+            if 'sequence_number' in extraction_object[name]:
+                pass
+            if 'sequence' not in extraction_object[name] and 'sequence_number' not in extraction_object[name]:
+                minimized[name]['extract'] = extraction_object[name]['extract']
+
+            if 'sub_rules' in extraction_object[name]:
+                minimized[name]['sub_rules'] = minimizeResult(extraction_object[name]['sub_rules'])
+    return minimized
+
+
 def flattenResult(extraction_object, name = 'root'):
     result = {}
     if isinstance(extraction_object, dict):
