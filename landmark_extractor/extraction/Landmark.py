@@ -46,10 +46,10 @@ def minimizeResult(extraction_object):
             if 'sequence_number' in extraction_object[name]:
                 pass
             if 'sequence' not in extraction_object[name] and 'sequence_number' not in extraction_object[name]:
-                minimized[name]['extract'] = extraction_object[name]['extract']
+                minimized[name] = extraction_object[name]['extract']
 
             if 'sub_rules' in extraction_object[name]:
-                minimized[name]['sub_rules'] = minimizeResult(extraction_object[name]['sub_rules'])
+                minimized[name] = minimizeResult(extraction_object[name]['sub_rules'])
     return minimized
 
 
