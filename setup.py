@@ -7,7 +7,7 @@ config = {
     'url': 'https://github.com/inferlink/landmark-extractor',
     'download_url': 'https://github.com/inferlink/landmark-extractor',
     'author_email': 'developers@inferlink.com',
-    'version': '0.2.3.0',
+    'version': '0.2.4.0',
     'license': 'BSD-4-Clause',
     'packages': find_packages(),
     'classifiers': [],
