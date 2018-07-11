@@ -206,23 +206,23 @@ class Rule(metaclass=abc.ABCMeta):
 
 class ItemRule(Rule):
     """ Rule to apply a begin set and single end regex and return only ONE value """
-    def apply(self, page_string):
-        value = self.extract(page_string)
+    def apply(self, page_string, parent_start_index=0):
+        value = self.extract(page_string, parent_start_index)
         
         if self.sub_rules:
-            value['sub_rules'] = self.sub_rules.extract(value['extract'])
+            value['sub_rules'] = self.sub_rules.extract(value['extract'], value['begin_index'])
         
         value['extract'] = self.remove_html(value['extract'])
         return value
     
-    def extract(self, page_string):
+    def extract(self, page_string, parent_start_index=0):
         try:
             begin_match_end = 0
             if self.begin_regex:
                 begin_match = self.begin_rule.search(page_string)
                 begin_match_end = begin_match.end()
-            end_match_start = len(page_string)
-            end_match_end = len(page_string)
+            end_match_start = len(page_string) - begin_match_end
+            end_match_end = len(page_string) - begin_match_end
             
             if self.end_regex:
                 end_match = self.end_rule.search(page_string[begin_match_end:])
@@ -231,13 +231,12 @@ class ItemRule(Rule):
             
             if self.include_end_regex:
                 extract = page_string[begin_match_end:begin_match_end+end_match_end]
-                begin_index = begin_match_end
-                end_index = begin_match_end+end_match_end
+                begin_index = begin_match_end + parent_start_index
+                end_index = begin_match_end + end_match_end + parent_start_index
             else:
                 extract = page_string[begin_match_end:begin_match_end+end_match_start]
-                begin_index = begin_match_end
-                end_index = begin_match_end+end_match_start
-            
+                begin_index = begin_match_end + parent_start_index
+                end_index = begin_match_end + end_match_start + parent_start_index
             if extract and self.strip_end_regex:
                 extract = re.sub(self.strip_end_regex+'$', '', extract)
                 end_index = begin_index + len(extract)
@@ -318,8 +317,8 @@ class ItemRule(Rule):
 class IterationRule(ItemRule):
     
     """ Rule to apply a begin set and single end regex and return all values """
-    def apply(self, page_string):
-        base_extract = self.extract(page_string)
+    def apply(self, page_string, parent_start_index=0):
+        base_extract = self.extract(page_string, parent_start_index)
         start_page_string = base_extract['extract']
         
         sequence_number = 1
@@ -382,10 +381,7 @@ class IterationRule(ItemRule):
         
         if self.sub_rules:
             for extract in extracts:
-                sub_extraction = self.sub_rules.extract(extract['extract'])
-                for sub_extract_name in sub_extraction:
-                    sub_extraction[sub_extract_name]['begin_index'] += extract['begin_index']
-                    sub_extraction[sub_extract_name]['end_index'] += extract['begin_index']
+                sub_extraction = self.sub_rules.extract(extract['extract'], extract['begin_index'])
                 extract['sub_rules'] = sub_extraction
         
         for extract in extracts:
@@ -449,10 +445,10 @@ class IterationRule(ItemRule):
 
 class RuleSet:
     """A set of rules that is built from a JSON Object or JSON Array"""
-    def extract(self, page_str):
+    def extract(self, page_str, parent_start_index=0):
         extraction_object = OrderedDict()
         for rule in self.rules:
-            extraction_object[rule.name] = rule.apply(page_str);
+            extraction_object[rule.name] = rule.apply(page_str, parent_start_index);
         
         return extraction_object
     
