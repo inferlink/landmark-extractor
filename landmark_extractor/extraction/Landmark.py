@@ -495,7 +495,7 @@ class RuleSet:
         return json.dumps(json_list, indent=2, separators=(',', ': '), ensure_ascii=False)
     
     #Must have over 50 chars and more than 50% html and on 50% of the pages through this one out
-    def removeBadRules(self, pages):
+    def hideBadRules(self, pages, remove=False):
         min_length = 50
         percent_with_html_thresh = 0.5
         percent_bad_thresh = 0.5
@@ -527,6 +527,11 @@ class RuleSet:
             bad_percentage = num_bad/float(total_pages)
             
             if bad_percentage < percent_bad_thresh:
+                rule.removehtml = previous_removehtml
+                good_rules.add_rule(rule)
+            elif not remove:
+                if 'HIDDEN' not in rule.tags:
+                    rule.tags.append('HIDDEN')
                 rule.removehtml = previous_removehtml
                 good_rules.add_rule(rule)
 #             else:
